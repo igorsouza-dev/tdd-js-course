@@ -1,0 +1,23 @@
+{
+  "name": "curso-js-tdd",
+  "version": "1.0.0",
+  "description": "Biblioteca do curso de JS com TDD na prática",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/havok1305/curso-js-tdd.git"
+  },
+  "keywords": [
+    "js",
+    "tdd"
+  ],
+  "author": "Igor Martins <havok1305@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/havok1305/curso-js-tdd/issues"
+  },
+  "homepage": "https://github.com/havok1305/curso-js-tdd#readme"
+}
