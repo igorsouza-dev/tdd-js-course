@@ -5,4 +5,4 @@ const div = (a, b) => (b === 0 ? 'cant divide by zero' : a / b);
 
 const foo = () => 'bla';
 
-export { sum, sub, multi, div };
+export { sum, sub, multi, div, foo };
