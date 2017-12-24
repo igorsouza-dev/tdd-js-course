@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { sum, sub, multi, div } from '../src/calc';
+import { sum, sub, multi, div, foo } from '../src/calc';
 
 describe('Calc', () => {
   describe('Smoke tests', () => {
@@ -44,6 +44,11 @@ describe('Calc', () => {
     });
     it('should return "cant divide by zero" when dividing by zero', () => {
       expect(div(2, 0)).to.be.equal('cant divide by zero');
+    });
+  });
+  describe('Foo', () => {
+    it('should return `bla`', () => {
+      expect(foo()).to.be.equal('bla');
     });
   });
 });
