@@ -1,25 +1,49 @@
-const { expect } = require('chai');
-const calc = require('../src/calc.js');
+import { expect } from 'chai';
+import { sum, sub, multi, div } from '../src/calc';
+
 describe('Calc', () => {
   describe('Smoke tests', () => {
-    it('should exists the calc lib', () => {
-      expect(calc).to.exist;
-    });
     it('should exists method "sum"', () => {
-      expect(calc.sum).to.exist;
-      expect(calc.sum).to.be.a('function');
+      expect(sum).to.exist;
+      expect(sum).to.be.a('function');
     });
     it('should exists method "sub"', () => {
-      expect(calc.sub).to.exist;
-      expect(calc.sub).to.be.a('function');
+      expect(sub).to.exist;
+      expect(sub).to.be.a('function');
     });
     it('should exists method "multi"', () => {
-      expect(calc.multi).to.exist;
-      expect(calc.multi).to.be.a('function');
+      expect(multi).to.exist;
+      expect(multi).to.be.a('function');
     });
     it('should exists method "div"', () => {
-      expect(calc.div).to.exist;
-      expect(calc.div).to.be.a('function');
+      expect(div).to.exist;
+      expect(div).to.be.a('function');
+    });
+  });
+  describe('Sum', () => {
+    it('should return 4 when "sum(2,2)"', () => {
+      expect(sum(2, 2)).to.be.equal(4);
+    });
+  });
+  describe('Sub', () => {
+    it('should return 0 when "sub(2,2)"', () => {
+      expect(sub(2, 2)).to.be.equal(0);
+    });
+    it('should return -2 when "sub(2,4)"', () => {
+      expect(sub(2, 4)).to.be.equal(-2);
+    });
+  });
+  describe('Multi', () => {
+    it('should return 8 when "multi(2,4)"', () => {
+      expect(multi(2, 4)).to.be.equal(8);
+    });
+  });
+  describe('Div', () => {
+    it('should return 1 when "div(2,2)"', () => {
+      expect(div(2, 2)).to.be.equal(1);
+    });
+    it('should return "cant divide by zero" when dividing by zero', () => {
+      expect(div(2, 0)).to.be.equal('cant divide by zero');
     });
   });
 });
